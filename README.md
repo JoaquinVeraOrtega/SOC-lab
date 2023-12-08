@@ -70,3 +70,21 @@
 - Verificar detección en LimaCharlie.
 - Explorar el evento detectado en la línea de tiempo.
 
+## Bloqueo de Ataques
+
+### Ejecución de Comandos para Generar Telemetría
+
+- Utilización de Sliver C2 para ejecutar el comando 'vssadmin delete shadows /all' en la víctima. (La eliminacion de copias de seguridad de volumen es un indicador temprano de ataques de Ransomware)
+- Creación de una regla para detectar y bloquear la eliminación de copias de seguridad de volumen.
+- Verificación en LimaCharlie de la detección generada por la actividad.
+
+### Creación de una Regla de Detección y Respuesta (D&R)
+
+- Extracción de datos del evento detectado para la elaboración de una regla de detección y respuesta.
+- Configuración de una acción de respuesta para detener el proceso padre responsable del comando ejecutado.
+
+### Prueba del Bloqueo
+
+- Repetición del comando de eliminación de copias de seguridad para verificar la efectividad de la regla.
+- Verificación de la finalización exitosa del proceso padre para confirmar la acción de bloqueo. La nueva regla nos corta el acceso al shell luego de ejecutar el comando 'vssadmin delete shadows /all'
+
