@@ -1,4 +1,11 @@
 # SOC-lab: 
+### Este laboratorio tiene como objetivo principal proporcionar un entorno controlado para explorar y practicar técnicas de ciberseguridad y respuesta ante amenazas. Herramientas utilizadas: 
+- VMware Workstation (Windows VM, Ubuntu Server VM)
+- Silver C2
+- LimaCharlie EDR
+- Sysmon
+
+# El proyecto, paso a paso:
 
 ## Configuración del Entorno Virtual
 
